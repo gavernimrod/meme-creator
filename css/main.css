@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Geostar+Fill');
+
+
+* > * {
+    box-sizing: border-box;
+}
+.website-grid {
+    grid-template-areas: "header header"
+    "nav nav"
+    "section section"
+    "main main"
+    "footer footer";
+    grid-template-columns: 2fr 1fr;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    line-height: 100%;
+    vertical-align: 50%;
+    grid-area: header;
+    background-color: #ff7f00;
+      }
+  
+h1  {
+    margin: 20px 20px;
+    text-align: center;
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    letter-spacing: 5px;
+    cursor: none;
+    /* padding: 10px 0px; */
+}
+nav {
+    grid-area: nav;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e84c3d;
+    
+  }
+
+section {
+    grid-area: section;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color:#ffffff;;
+    justify-content: center;
+
+}
+
+ul > li {
+    margin: 0 20px;
+    padding: 0 5px;
+    transition: .2s;
+    
+}
+ul > li:hover {
+    font-weight: bold;
+    transition: .2s;
+}
+
+strong {
+    background-color: white;
+    z-index: 10;
+}
+
+main {
+grid-area: main;
+grid-template-columns:0.05fr 0.9fr 0.05fr;
+width: 100%;
+max-height: 100%;
+box-sizing: border-box;
+}
+
+.gallery-container {
+    width: 100%;
+    padding: 20px;
+    overflow-y: none;
+    background-color: rgba(150, 70, 70, 0.2);
+    margin: 0 auto;
+    height: 100%;   
+    align-items: center;
+}
+
+.gallery-grid {
+    align-items: center;
+    grid-template-rows: repeat(3,0.25fr);
+    grid-template-columns: repeat(6,0.25fr);
+    align-self: center;
+    grid-gap: 10px;
+}
+
+@media (max-width: 1000px){    
+    .gallery-grid {
+        grid-template-rows: repeat(5,0.25fr);
+        grid-template-columns: repeat(5,0.5fr); 
+    }
+    .gallery-container{
+        height: 100vh;
+    }
+    main {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 800px){
+    .gallery-grid{
+        grid-template-rows: repeat(5,0.25fr);
+        grid-template-columns: repeat(5,0.25fr); 
+    }
+
+}
+
+@media (max-width: 550px){
+    .website-grid {
+        grid-template-areas: "header"
+        "nav"
+        "section"
+        "main"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+}
+
+.gallery-container a { 
+    width: 100px;
+    height: 100px;
+    margin: auto auto;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}    
+
+.gallery-container img { 
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition:  all .3s  ease-in-out;
+}
+
+.gallery-container img:hover+.img-details {
+    visibility: visible;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: inherit;
+    transform: scale(1.2);
+    z-index: 2;
+    transition:  all .2s;    
+}
+
+footer {
+
+    height: 100px;
+    grid-area: footer;
+    background-color: #ff7f00;;
+}
+
+
+i {
+    cursor: pointer;
+}
+
+
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+
+.space-between {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.col {
+    flex-flow: column;
+}
+
+.hide {
+    display: none;
+}
+
+.wrapper {
+    flex-flow: wrap;
+}
+
+.wrapper {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+  }
+  .wrapper:before {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    top: -120%;
+    left: -120%;
+    background: linear-gradient(transparent 0%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.1) 55%, transparent 100%);
+    transition: all 2s;
+    transform: rotate(-45deg);
+  }
+  

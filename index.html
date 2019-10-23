@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <!-- <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" /> -->
+    <link rel="stylesheet" href="lib/animate/animate.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="init()">
+    <div class="website-grid grid">
+
+        <header>
+            <h1>Meme Generator</h1>
+        </header>
+        <section class="flex space-around">
+            <ul class="flex space-evenly">
+               
+                        <li>
+                            <a href="#" class="toggle-display-btn">Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-display-btn" >Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#about-me" class="about-link">About Me</a>
+                        </li>
+                    </ul>
+          
+        </section>
+        <main class="flex">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="gallery-container">
+            </div>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+    </main>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea alias suscipit asperiores ullam soluta perferendis obcaecati molestias odio dolorum dicta tenetur culpa, nobis et doloremque officiis at corporis hic neque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo praesentium quidem modi magnam laborum tempora soluta qui expedita a, autem accusantium voluptates, dolore aperiam quia sed iure ducimus? Quos?
+    </footer>
+    </div>
+
+
+    <script src="js/util.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/app-controller.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/gallery-service.js"></script>
+</body>
+
+</html>
