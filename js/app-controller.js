@@ -11,7 +11,7 @@ function renderGallery() {
         elCarouselBtn[1].classList.add('hide');
         let strHtml = '';
         gImgs.map(function (img) {
-            strHtml += `<a href="editor.html?${img.id}"><img class="my-slides"  src="${img.url}" alt="">`;
+            strHtml += `<a href="editor.html?${img.id}"><img src="${img.url}" alt="">`;
         })
         elGallery.innerHTML=strHtml;
 }
